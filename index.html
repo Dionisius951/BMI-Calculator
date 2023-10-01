@@ -5,26 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI Calculator</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="form-bmi">
-      <form action="">
-        <input
-          type="number"
-          name="tinggi"
-          id="height"
-          placeholder="Tinggi Anda"
-        />
-        <input
-          type="number"
-          name="berat"
-          id="weight"
-          placeholder="Berat Badan Anda"
-        />
-        <button id="btn-submit">Hitung</button>
-      </form>
-      <div class="output-data">
-        <!-- Menampilkan hasil kalkulasi disni  -->
+    <div class="container">
+      <div class="form-bmi">
+        <div class="header">
+          <H3>BMI Calculator</H3>
+        </div>
+        <form class="frm-input">
+          <label for="tinggi">
+            Tinggi Badan 
+            <input
+              type="number"
+              name="tinggi"
+              id="height"
+              placeholder="Masukan Tinggi Badan Anda"
+            />
+          </label>
+          <label for="berat">
+            Berat Badan 
+            <input
+              type="number"
+              name="berat"
+              id="weight"
+              placeholder="Masukan Berat Badan Anda"
+            />
+          </label>
+          <button id="btn-submit">Hitung</button>
+          <div class="output-data">
+            <!-- Menampilkan hasil kalkulasi disni  -->
+          </div>
+        </form>
       </div>
     </div>
     <script src="script.js"></script>

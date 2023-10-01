@@ -4,9 +4,13 @@ function handleDataCalculator(){
     const weight = document.getElementById("weight").value
     const height = document.getElementById("height").value
 
-    return {
-        weight : Number(weight),
-        height : Number(height),
+    if (weight !== "" && height !== "") {
+        return {
+            weight : Number(weight),
+            height : Number(height),
+        }
+    } else {
+        alert("Isi data terlebih dahulu")
     }
 }
 
@@ -17,21 +21,22 @@ function hitungBMI(){
 
 function kategoriBMI(data){
     const outputData = document.querySelector('.output-data');
+    let result = ""
     if (data <= 18.5) {
-        outputData.innerHTML = "Under Weight";
+        result = "Under Weight";
     } else if (data > 18.5 && data <= 24.9) {
-        outputData.innerHTML = "Normal Weight"
+        result = "Normal Weight"
     } else if (data > 24.9 && data <= 29.9) {
-        outputData.innerHTML = "Over Weight"
-    }else if (data > 29.9) {
-        outputData.innerHTML = "Obesity"
+        result = "Over Weight"
     } else {
-        return
+        result = "Obesity"
     }
+
+    outputData.innerHTML = `BMI Anda <b> ${data}</b>, Anda termasuk dalam kategori <b> ${result} </b>`
 }
 
 const btnSubmit = document.getElementById('btn-submit').addEventListener('click', function(event){
     event.preventDefault();
-    
+
     kategoriBMI(hitungBMI())
 })
