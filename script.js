@@ -16,14 +16,15 @@ function hitungBMI(){
 }
 
 function kategoriBMI(data){
+    const outputData = document.querySelector('.output-data');
     if (data <= 18.5) {
-        return "Under Weight"
+        outputData.innerHTML = "Under Weight";
     } else if (data > 18.5 && data <= 24.9) {
-        return "Normal Weight"
+        outputData.innerHTML = "Normal Weight"
     } else if (data > 24.9 && data <= 29.9) {
-        return "Over Weight"
+        outputData.innerHTML = "Over Weight"
     }else if (data > 29.9) {
-        return "Obesity"
+        outputData.innerHTML = "Obesity"
     } else {
         return
     }
@@ -32,6 +33,5 @@ function kategoriBMI(data){
 const btnSubmit = document.getElementById('btn-submit').addEventListener('click', function(event){
     event.preventDefault();
     
-    console.log(hitungBMI())
-    console.log(kategoriBMI(hitungBMI()))
+    kategoriBMI(hitungBMI())
 })
