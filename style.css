@@ -4,26 +4,42 @@
   font-family: "Poppins", sans-serif;
   font-family: "Roboto", sans-serif;
 }
+
 .container{
     width: 100%;
-    height: 600px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(227, 227, 227, 0.571);
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 5px rgb(225, 225, 225);
+}
+
+.hero{
+    width: 400px;
+    height: 550px;
+    text-align: center;
+    background-color:#45C4B0;
 }
 .form-bmi {
-  width: 100%;
-  height: 500px;
+  width: 650px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #fff;
 }
 
 .header{
     text-align: left;
     width: 470px;
-    font-size: 32px;
+    font-size: 28px;
     padding: 5px;
     margin-bottom: 10px;
 }
@@ -35,7 +51,8 @@
 
 .frm-input label{
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 18px;
 }
 
 
@@ -51,12 +68,19 @@
     padding: 5px;
     border-radius: 2px;
     border: 0px;
-    background-color: #038C3E;
+    background-color: #45C4B0;
     color: white;
     margin-bottom: 30px;
+    font-size: 16px;
 }
 .output-data{
     font-size: 16px;
     width: 100%;
     height: 50px;
+}
+
+img{
+    text-align: center;
+    width: 350px;
+    height: 550px;
 }

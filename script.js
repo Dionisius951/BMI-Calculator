@@ -16,7 +16,7 @@ function handleDataCalculator(){
 
 function hitungBMI(){
     const data = handleDataCalculator();
-    return ((data.weight/((data.height / 100)**2 )).toFixed(2))
+    return ((data.weight/((data.height / 100)**2 )).toFixed(1))
 }
 
 function kategoriBMI(data){
